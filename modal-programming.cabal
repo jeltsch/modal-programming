@@ -1,0 +1,45 @@
+cabal-version:      3.0
+name:               modal-programming
+version:            0.0.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE.md
+copyright:          © 2021–2022 Wolfgang Jeltsch
+author:             Wolfgang Jeltsch
+maintainer:         wolfgang-it@jeltsch.info
+stability:          provisional
+homepage:           https://github.com/jeltsch/modal-programming
+bug-reports:        https://github.com/jeltsch/modal-programming/issues/new?labels=type%3A%20bugfix
+package-url:        https://hackage.haskell.org/package/modal-programming-0.0.0.0/modal-programming-0.0.0.0.tar.gz
+synopsis:           Modal programming in Haskell
+description:        Haskell 2010 extended with higher-rank polymorphism is
+                    approximately System F/ω/ and thus roughly corresponds to
+                    intuitionistic higher-order propositional logic via a
+                    Curry–Howard isomorphism. GHC’s static pointers extension,
+                    while having been conceived specifically for distributed
+                    programming, further extends Haskell such that it becomes a
+                    kind of generic modal programming language. This allows
+                    programmers to write libraries that turn Haskell into the
+                    Curry–Howard correspondents of various modal logics and to
+                    combine these libraries to arrive at programming languages
+                    that integrate multiple modal features. The
+                    @modal-programming@ package provides support for writing
+                    such libraries.
+category:           Control, Effect, Type System
+tested-with:        GHC == { 8.10.7, 9.2.3 }
+extra-source-files: README.md CHANGELOG.md CONTRIBUTING.md
+
+library
+    default-language:   Haskell2010
+    default-extensions: NoStarIsType
+    build-depends:      base
+    exposed-modules:    Control.Modal
+    hs-source-dirs:     src
+
+source-repository head
+    type:     git
+    location: https://github.com/jeltsch/modal-programming.git
+
+source-repository this
+    type:     git
+    location: https://github.com/jeltsch/modal-programming.git
+    tag:      release/0.0.0.0

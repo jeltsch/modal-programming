@@ -1,0 +1,26 @@
+name: Automated builds
+
+on: [push]
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Get Hackage package list
+        run: |
+          cabal update
+      - name: Build with all specified GHCs
+        run: |
+          ghc_versions=$(sed -ne '
+            /tested-with:/ {
+              s/^tested-with:  *GHC == { \(.*\) }$/\1/
+              s/, / /g
+              p
+            }
+          ' *.cabal)
+          for ghc_version in $ghc_versions
+          do
+            ghcup run --install --ghc $ghc_version cabal build
+          done

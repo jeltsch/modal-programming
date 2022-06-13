@@ -1,0 +1,4 @@
+packages: .
+
+package modal-programming
+    ghc-options: -Wall -Werror
