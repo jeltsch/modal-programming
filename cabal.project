@@ -1,4 +1,17 @@
 packages: .
 
 package modal-programming
-    ghc-options: -Wall -Werror
+    ghc-options: -Wall
+                 -Wmonomorphism-restriction
+                 -Wimplicit-prelude
+                 -Wmissing-local-signatures
+                 -Wmissing-export-lists
+                 -Wmissing-import-lists
+                 -Wmissing-home-modules
+                 -Widentities
+                 -Wredundant-constraints
+                 -Wpartial-fields
+                 -Wall-missed-specializations
+                 -Wcpp-undef
+                 -Wunused-packages
+                 -Werror
