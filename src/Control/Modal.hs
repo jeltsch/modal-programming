@@ -5,8 +5,8 @@
     extension, while having been conceived specifically for distributed
     programming, makes it possible to turn Haskell into the Curry–Howard
     correspondents of typical modal logics. Since the static pointers extension
-    only provides the necessary basis for modal programming, specific features
-    of languages corresponding to concrete modal logics must be implemented as
+    only provides the general basis for modal programming, specific features of
+    languages corresponding to concrete modal logics must be implemented as
     libraries. The @Control.Modal@ module provides support for writing such
     libraries.
 
