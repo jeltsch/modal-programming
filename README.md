@@ -5,12 +5,12 @@ Haskell 2010 extended with higher-rank polymorphism is approximately
 System F*ω* and thus roughly corresponds to intuitionistic higher-order
 propositional logic via a Curry–Howard isomorphism. GHC’s static
 pointers extension, while having been conceived specifically for
-distributed programming, further extends Haskell such that it becomes a
-kind of generic modal programming language. This allows programmers to
-write libraries that turn Haskell into the Curry–Howard correspondents
-of various modal logics and to combine these libraries to arrive at
-programming languages that integrate multiple modal features. The
-`modal-programming` package provides support for writing such libraries.
+distributed programming, makes it possible to turn Haskell into the
+Curry–Howard correspondents of typical modal logics. Since the static
+pointers extension only provides the necessary basis for modal
+programming, specific features of languages corresponding to concrete
+modal logics must be implemented as libraries. The `modal-programming`
+package provides support for writing such libraries.
 
 
 Modal logics and modal programming languages
