@@ -1,10 +1,18 @@
 packages: .
 
 package modal-programming
-    ghc-options: -Weverything
-                 -Wno-missing-safe-haskell-mode
-                 -Wno-safe
-                 -Wno-missing-kind-signatures
-                 -Wno-unused-type-patterns
-                 -Wno-missing-deriving-strategies
+    ghc-options: -Wall
+                 -Wmonomorphism-restriction
+                 -Wimplicit-prelude
+                 -Wmissing-local-signatures
+                 -Wmissing-export-lists
+                 -Wmissing-import-lists
+                 -Wmissing-home-modules
+                 -Widentities
+                 -Wredundant-constraints
+                 -Wpartial-fields
+                 -Wall-missed-specializations
+                 -Wcpp-undef
+                 -Wunused-packages
+                 -Wimplicit-lift
                  -Werror
