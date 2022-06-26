@@ -10,6 +10,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
       - name: Check the package
+        shell: sh
         run: cabal check
   builds:
     name: Build the package with all specified compilers
