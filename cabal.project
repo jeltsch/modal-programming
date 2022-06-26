@@ -14,5 +14,4 @@ package modal-programming
                  -Wall-missed-specializations
                  -Wcpp-undef
                  -Wunused-packages
-                 -Wimplicit-lift
                  -Werror
