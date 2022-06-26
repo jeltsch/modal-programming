@@ -1,8 +1,15 @@
-name: Automated builds
+name: Automated checks
 
 on: [push]
 
 jobs:
+  hackage-compat-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+      - name: Check the package for Hackage compatibility
+        run: cabal check
   builds:
     runs-on: ubuntu-latest
     steps:
