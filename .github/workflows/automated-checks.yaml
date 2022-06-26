@@ -12,6 +12,15 @@ jobs:
       - name: Check the package
         shell: sh
         run: cabal check
+  outdated-dependencies-check:
+    name: Check the package for outdated dependency specifications
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+      - name: Check the package
+        shell: sh
+        run: cabal outdated --exit-code --ignore=base
   builds:
     name: Build the package with all specified compilers
     runs-on: ubuntu-latest
