@@ -4,16 +4,19 @@ on: [push]
 
 jobs:
   hackage-compat-check:
+    name: Check the package for Hackage compatibility
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
-      - name: Check the package for Hackage compatibility
+      - name: Check the package
+        shell: sh
         run: cabal check
   builds:
+    name: Build the package with all specified compilers
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
-      - name: Build the package with all specified compilers
+      - name: Build the package
         uses: jeltsch/actions-cabal-build@master
