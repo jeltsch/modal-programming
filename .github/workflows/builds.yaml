@@ -9,4 +9,4 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
       - name: Build the package with all specified compilers
-        uses: jeltsch/actions-cabal-build@enhancement/initial-version
+        uses: jeltsch/actions-cabal-build@master
