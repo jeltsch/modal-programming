@@ -85,4 +85,4 @@
 -}
 module Control.Modal () where
 
-import Prelude ()
+import Prelude (dummy)
