@@ -18,6 +18,9 @@ jobs:
     steps:
       - name: 'Check out the repository'
         uses: actions/checkout@v3
+      - name: 'Get package information'
+        shell: sh
+        run: cabal update
       - name: 'Check the package'
         shell: sh
         run: cabal outdated --exit-code --ignore=base
